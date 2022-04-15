@@ -42,7 +42,7 @@ class Title extends StatelessWidget {
         children: [
           Column(
             // ******** VERTICAL
-            // mainAxisAlignment: MainAxisAlignment.start,
+            // mainAxisAlignment: MainAxisAlignment.center,
             // alinear a la izquierda. - ********* HORIZONTAL
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
