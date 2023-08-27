@@ -8,7 +8,7 @@ class CardTable extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Table(
-      children: [
+      children: const [
         TableRow(children: [
           _SigleCard(
             color: Colors.blue,
@@ -78,20 +78,20 @@ class _SigleCard extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           CircleAvatar(
-            backgroundColor: this.color,
+            backgroundColor: color,
             child: Icon(
-              this.icon,
+              icon,
               size: 35,
               color: Colors.white,
             ),
             radius: 30,
           ),
-          SizedBox(
+          const SizedBox(
             height: 15,
           ),
           Text(
-            this.text,
-            style: TextStyle(color: this.color, fontSize: 18),
+            text,
+            style: TextStyle(color: color, fontSize: 18),
           ),
         ],
       ),
@@ -106,7 +106,7 @@ class _CardBackground extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(15),
+      margin: const EdgeInsets.all(15),
       child: ClipRRect(
         borderRadius: BorderRadius.circular(20),
         child: BackdropFilter(
@@ -114,10 +114,10 @@ class _CardBackground extends StatelessWidget {
           child: Container(
             height: 180,
             decoration: BoxDecoration(
-              color: Color.fromRGBO(62, 66, 107, 0.7),
+              color: const Color.fromRGBO(62, 66, 107, 0.7),
               borderRadius: BorderRadius.circular(20),
             ),
-            child: this.child,
+            child: child,
           ),
         ),
       ),

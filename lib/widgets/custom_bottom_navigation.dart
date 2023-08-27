@@ -1,19 +1,22 @@
 import 'package:flutter/material.dart';
 
 class CustomBottomNavigation extends StatelessWidget {
-  const CustomBottomNavigation({Key? key}) : super(key: key);
+  final onTapTapped;
+  int indexTap;
+  CustomBottomNavigation({Key? key, this.onTapTapped, this.indexTap = 0})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
       // no mostrar el label del item seleccionado
-      showSelectedLabels: false,
+      showSelectedLabels: true,
       // no mostrar el label de los item no seleccionados
-      showUnselectedLabels: false,
+      showUnselectedLabels: true,
       selectedItemColor: Colors.pink,
-      backgroundColor: Color.fromRGBO(55, 57, 84, 1),
-      unselectedItemColor: Color.fromRGBO(116, 117, 152, 1),
-      currentIndex: 0,
+      backgroundColor: const Color.fromRGBO(55, 57, 84, 1),
+      unselectedItemColor: const Color.fromRGBO(116, 117, 152, 1),
+      currentIndex: indexTap,
       items: const [
         BottomNavigationBarItem(
             icon: Icon(Icons.calendar_today_outlined), label: 'Calendario'),
@@ -23,6 +26,7 @@ class CustomBottomNavigation extends StatelessWidget {
             icon: Icon(Icons.supervised_user_circle_outlined),
             label: 'Usuarios'),
       ],
+      // onTap: onTapTapped(),
     );
   }
 }

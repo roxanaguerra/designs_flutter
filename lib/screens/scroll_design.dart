@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class ScrollScreen extends StatelessWidget {
   ScrollScreen({Key? key}) : super(key: key);
 
-  final boxDecoration = BoxDecoration(
+  final boxDecoration = const BoxDecoration(
       gradient: LinearGradient(
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
@@ -25,10 +25,10 @@ class ScrollScreen extends StatelessWidget {
       decoration: boxDecoration,
       child: PageView(
         // mostrar una parte blanca del scroll inicio y al final
-        physics: BouncingScrollPhysics(),
+        physics: const BouncingScrollPhysics(),
         scrollDirection: Axis.vertical,
         children: [
-          Page1(),
+          const Page1(),
           Page2(),
         ],
       ),
@@ -47,8 +47,9 @@ class Page1 extends StatelessWidget {
       children: [
         // Background img
         Background(),
+
         //Main Content
-        MainContent(),
+        const MainContent(),
       ],
     );
   }
@@ -58,10 +59,10 @@ class Background extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Color(0xFF30BAD6),
+      color: const Color(0xFF30BAD6),
       height: double.infinity,
       alignment: Alignment.topCenter,
-      child: Image(
+      child: const Image(
         image: AssetImage('assets/scroll-1.png'),
       ),
     );
@@ -75,7 +76,7 @@ class MainContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var textStyle = TextStyle(
+    var textStyle = const TextStyle(
         color: Colors.white, fontSize: 50, fontWeight: FontWeight.bold);
     return SafeArea(
       // no se preocupe por la parte de abajo
@@ -84,8 +85,8 @@ class MainContent extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          SizedBox(
-            height: 50,
+          const SizedBox(
+            height: 30,
           ),
           Text(
             '11°',
@@ -96,7 +97,7 @@ class MainContent extends StatelessWidget {
             style: textStyle,
           ),
           Expanded(child: Container()),
-          Icon(Icons.keyboard_arrow_down, size: 100, color: Colors.white),
+          const Icon(Icons.keyboard_arrow_down, size: 100, color: Colors.white),
         ],
       ),
     );
@@ -107,14 +108,15 @@ class Page2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Color(0xFF30BAD6),
+      color: const Color(0xFF30BAD6),
       child: Center(
         child: TextButton(
           style: TextButton.styleFrom(
-              backgroundColor: Color(0xFF0098FA), shape: StadiumBorder()),
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 40),
-            child: const Text(
+              backgroundColor: const Color(0xFF0098FA),
+              shape: const StadiumBorder()),
+          child: const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 40),
+            child: Text(
               'Bienvenido',
               style: TextStyle(
                 color: Colors.white,

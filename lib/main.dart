@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData.dark(),
       initialRoute: 'home_screen',
       routes: {
-        'basic_design': (BuildContext context) => const BasicDesignScreen(),
+        'basic_design': (_) => const BasicDesignScreen(),
         'scroll_screen': (_) => ScrollScreen(),
         'home_screen': (_) => HomeScreen(),
       },

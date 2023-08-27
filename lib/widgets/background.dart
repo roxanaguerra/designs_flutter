@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 class BackgroundDesign extends StatelessWidget {
   BackgroundDesign({Key? key}) : super(key: key);
 
-// propiedad de mi clase
-  final boxDecoration = BoxDecoration(
+  // propiedad de mi clase
+  final boxDecoration = const BoxDecoration(
     gradient: LinearGradient(
         begin: Alignment.topCenter,
         end: Alignment.bottomCenter,
@@ -29,8 +29,8 @@ class BackgroundDesign extends StatelessWidget {
           decoration: boxDecoration,
         ),
 
-        // pink box
-        Positioned(top: -100, left: -30, child: _PinkBox()),
+        // Pink box
+        const Positioned(top: -100, left: -30, child: _PinkBox()),
       ],
     );
   }
@@ -49,9 +49,9 @@ class _PinkBox extends StatelessWidget {
         width: 360,
         height: 360,
         decoration: BoxDecoration(
-          color: Colors.pink,
+          color: Colors.yellow,
           borderRadius: BorderRadius.circular(80),
-          gradient: LinearGradient(
+          gradient: const LinearGradient(
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
               stops: [

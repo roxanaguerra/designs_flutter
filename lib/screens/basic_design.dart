@@ -8,15 +8,19 @@ class BasicDesignScreen extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          Image(image: AssetImage('assets/portada.jpg')),
+          // Imagen
+          const Image(image: AssetImage('assets/portada.jpg')),
+
           // TITULO
-          Title(),
+          const Title(),
+
           // button section
-          ButtonSection(),
+          const ButtonSection(),
+
           // descripcion
           Container(
-            margin: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
-            child: Text(
+            margin: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+            child: const Text(
                 'Amet amet ea excepteur elit adipisicing proident. Consequat laborum consequat cillum dolor. Lorem laborum adipisicing minim ullamco ea quis incididunt excepteur voluptate. Deserunt dolor quis nostrud proident cupidatat ea veniam.Aute velit est cillum cupidatat nostrud. Amet qui do consequat et laborum duis eu consectetur aliqua. Consectetur laboris occaecat et anim officia do ad duis esse. Eu fugiat culpa sunt sit ipsum. Elit excepteur nostrud sint ad voluptate. Cillum adipisicing consectetur magna aliquip velit ex est ut do consequat irure. Laborum culpa consectetur incididunt occaecat incididunt incididunt commodo.'),
           )
         ],
@@ -33,7 +37,7 @@ class Title extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+      margin: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
       child: Row(
         // ******** HORIZONTAL
         // mainAxisAlignment: MainAxisAlignment.start,
@@ -45,7 +49,7 @@ class Title extends StatelessWidget {
             // mainAxisAlignment: MainAxisAlignment.center,
             // alinear a la izquierda. - ********* HORIZONTAL
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
+            children: const [
               Text(
                 'Imagen de un hermoso paisaje',
                 style: TextStyle(fontWeight: FontWeight.bold),
@@ -57,11 +61,11 @@ class Title extends StatelessWidget {
             ],
           ),
           Expanded(child: Container()),
-          Icon(
+          const Icon(
             Icons.star,
             color: Colors.red,
           ),
-          Text('41'),
+          const Text('41'),
         ],
       ),
     );
@@ -76,10 +80,10 @@ class ButtonSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 50, vertical: 20),
+      margin: const EdgeInsets.symmetric(horizontal: 50, vertical: 20),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: [
+        children: const [
           CustomButton(
             icon: Icons.call,
             text: 'CALL',
@@ -113,14 +117,14 @@ class CustomButton extends StatelessWidget {
     return Column(
       children: [
         Icon(
-          this.icon,
+          icon,
           color: Colors.blue[300],
         ),
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
         Text(
-          this.text,
+          text,
           style: TextStyle(
             color: Colors.blue[300],
           ),
